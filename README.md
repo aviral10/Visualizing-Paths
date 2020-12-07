@@ -1,1 +1,25 @@
-# Visualizing-Paths
+# Path finding Visualization
+
+### Run: 
+ - Run index.html (I recommend to use a LiveServer to run index.html on `localhost` (sometimes p5JS doesn't loadup correctely on raw index.html))
+ 
+ :)
+
+ ## Instructions:
+  - Choose a starting point and an ending point.
+  - You can draw walls to obstruct the path (Use Remove Walls to remove unwanted walls)
+  - Select an algorithm(Only 1 for now, BFS) 
+  - Click on Visualize!. 
+  - Press Reset to reset everything
+  - Added a maze Generation option too.
+ 
+ <!-- Samples:
+ 
+ ![Sample_1](sample1.png)
+
+ ![Sample_2](sample_2.png)
+
+ ![Sample_3](sample2.png)
+
+ ![Sample_4](sample_1.png)
+ -->
