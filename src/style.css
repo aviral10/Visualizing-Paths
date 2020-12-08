@@ -16,6 +16,15 @@ body{
     /* font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', 'Arial, sans-serif'; */
     font-size: 25px;
 }
+
+.foot {
+	text-align: center;
+	/* color: grey; */
+	/* font-family: Consolas; */
+	margin: 10px 0px 50px 0px;
+}
+
+
 .instructions{
     height: 200px;
     margin: auto;

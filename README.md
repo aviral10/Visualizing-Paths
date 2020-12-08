@@ -1,7 +1,7 @@
 # Path finding Visualization
 
 ### Run: 
- - Run index.html (I recommend to use a LiveServer to run index.html on `localhost` (sometimes p5JS doesn't loadup correctely on raw index.html))
+ - Run index.html (I recommend using a LiveServer to run index.html on `localhost` (sometimes p5JS doesn't loadup correctly on raw index.html))
  
  :)
 
