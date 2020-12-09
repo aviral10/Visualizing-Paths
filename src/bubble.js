@@ -23,13 +23,14 @@ class Shape{
     }
 
     shDraw(){
+        
         let xpos = this.x*(GLOBAL_SHAPE);
         let ypos = this.y*(GLOBAL_SHAPE);
         xpos += GLOBAL_SHAPE/2; ypos += GLOBAL_SHAPE/2;
         fill("#73fff3");
         noStroke();
         circle(xpos, ypos, this.cirR);
-        // console.log("CALLLED")
+    
     }
 
     bDraw(){
@@ -37,6 +38,13 @@ class Shape{
         let ypos = this.y*(GLOBAL_SHAPE);
         // fill("#291710");
         fill("#000000");
+        square(xpos,ypos,GLOBAL_SHAPE);
+    }
+
+    coverUp(){
+        let xpos = this.x*(GLOBAL_SHAPE);
+        let ypos = this.y*(GLOBAL_SHAPE);
+        fill("#00fae4");
         square(xpos,ypos,GLOBAL_SHAPE);
     }
 }

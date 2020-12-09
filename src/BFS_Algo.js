@@ -17,31 +17,42 @@ function BFS2(){
     temp = Spoint[0];
     endP = Epoint[0];
     q.push(objs[temp.xid][temp.yid])
-    interval = setInterval(BFS_a, 1);
+    interval = setInterval(BFS_a, 2);
+    let redundant = function(){
+        let hold = objs[temp.xid][temp.yid]
+        let top    = {x: hold.x-1, y: hold.y, valid : false};
+        let bottom = {x: hold.x+1, y: hold.y, valid : false};
+        let left   = {x: hold.x, y: hold.y-1, valid : false};
+        let right  = {x: hold.x, y: hold.y+1, valid : false};
+        
+        try{
+            try{
+                objs[top["x"]][top["y"]].coverUp();
+            }catch(err){
 
-    let hold = objs[temp.xid][temp.yid]
-    let top    = {x: hold.x-1, y: hold.y, valid : false};
-    let bottom = {x: hold.x+1, y: hold.y, valid : false};
-    let left   = {x: hold.x, y: hold.y-1, valid : false};
-    let right  = {x: hold.x, y: hold.y+1, valid : false};
-    isValid(top); isValid(bottom); isValid(left); isValid(right);
-    try{
-        if(top["valid"]) {
-            objs[top["x"]][top["y"]].shDraw();
-    
-        }
-        if(bottom["valid"]) {
-            objs[bottom["x"]][bottom["y"]].shDraw();
-        }
-        if(left["valid"]) {
-            objs[left["x"]][left["y"]].shDraw();
-        }
-        if(right["valid"]){
-            objs[right["x"]][right["y"]].shDraw();
-        }
-    }catch (err){
+            }
+            try{
+                objs[bottom["x"]][bottom["y"]].coverUp();
+            }catch(err){
 
+            }
+            try{
+                objs[left["x"]][left["y"]].coverUp();
+            }catch(err){
+
+            }
+            try{
+                objs[right["x"]][right["y"]].coverUp();
+            }catch(err){
+
+            }
+            
+        }catch (err){
+
+        }
     }
+    let t_temporary = setTimeout(redundant, 100);
+    
 }
 
 
