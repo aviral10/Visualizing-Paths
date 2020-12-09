@@ -7,7 +7,7 @@ function BFS2(){
     DONE = true;
     found = false;
     if(!DONE){
-        alert("Click Done before you choose an Algorithm!");
+        alert("Choose an Algorithm");
         return;
     }
     inBFS = true;
@@ -18,6 +18,30 @@ function BFS2(){
     endP = Epoint[0];
     q.push(objs[temp.xid][temp.yid])
     interval = setInterval(BFS_a, 1);
+
+    let hold = objs[temp.xid][temp.yid]
+    let top    = {x: hold.x-1, y: hold.y, valid : false};
+    let bottom = {x: hold.x+1, y: hold.y, valid : false};
+    let left   = {x: hold.x, y: hold.y-1, valid : false};
+    let right  = {x: hold.x, y: hold.y+1, valid : false};
+    isValid(top); isValid(bottom); isValid(left); isValid(right);
+    try{
+        if(top["valid"]) {
+            objs[top["x"]][top["y"]].shDraw();
+    
+        }
+        if(bottom["valid"]) {
+            objs[bottom["x"]][bottom["y"]].shDraw();
+        }
+        if(left["valid"]) {
+            objs[left["x"]][left["y"]].shDraw();
+        }
+        if(right["valid"]){
+            objs[right["x"]][right["y"]].shDraw();
+        }
+    }catch (err){
+
+    }
 }
 
 
@@ -72,22 +96,7 @@ function BFS_a(){
         }else{
             tracePathAni();
             changeData("Path found!")
-            // let final = Spoint[0];
-            // final = objs[final.xid][final.yid];
-            // let curr = Epoint[0];
-            // let temp = objs[curr.xid][curr.yid];
-            // while(temp != final){
-            //     let key = String(temp.x) + "," + String(temp.y);
-            //     let pox = parents[key];
-            //     pox = pox.split(",");
-            //     let a = parseInt(pox[0]);
-            //     let b = parseInt(pox[1]);
-            //     temp = objs[a][b];
-            //     // console.log(temp);
-            //     // console.log("Boo");
-            //     fill("#730fff");
-            //     square((GLOBAL_SHAPE)*temp.x, (GLOBAL_SHAPE)*temp.y, GLOBAL_SHAPE);
-            // }
+            
         }
         for(let i=0;i<Spoint.length;i++){
             Spoint[i].draw();
