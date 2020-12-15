@@ -24,24 +24,27 @@ function BFS2(){
         let bottom = {x: hold.x+1, y: hold.y, valid : false};
         let left   = {x: hold.x, y: hold.y-1, valid : false};
         let right  = {x: hold.x, y: hold.y+1, valid : false};
-        
         try{
             try{
-                objs[top["x"]][top["y"]].coverUp();
+                if(!objs[top["x"]][top["y"]].blocked)
+                    objs[top["x"]][top["y"]].coverUp();
             }catch(err){
 
             }
             try{
-                objs[bottom["x"]][bottom["y"]].coverUp();
+                if(!objs[bottom["x"]][bottom["y"]].blocked)
+                    objs[bottom["x"]][bottom["y"]].coverUp();
             }catch(err){
 
             }
             try{
+                if(!objs[left["x"]][left["y"]].blocked)
                 objs[left["x"]][left["y"]].coverUp();
             }catch(err){
 
             }
             try{
+                if(!right[bottom["x"]][right["y"]].blocked)
                 objs[right["x"]][right["y"]].coverUp();
             }catch(err){
 
