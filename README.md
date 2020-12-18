@@ -15,4 +15,4 @@
  
 ## Example:
  
- ![Example_1](https://media.giphy.com/media/WvbqG1V6g0ntqEIjyj/giphy.gif)
+ ![Example](https://media.giphy.com/media/WvbqG1V6g0ntqEIjyj/giphy.gif | width=500)
