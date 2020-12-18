@@ -14,5 +14,4 @@
   - Added a maze Generation option too.
  
 ## Example:
- 
- ![Example](https://media.giphy.com/media/WvbqG1V6g0ntqEIjyj/giphy.gif | width=500)
+  <img src="https://media.giphy.com/media/WvbqG1V6g0ntqEIjyj/giphy.gif" width="800" height="400" />
