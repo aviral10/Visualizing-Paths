@@ -12,9 +12,11 @@ let d, bfs, mz, button, start, end, rwall;
 let Rpoint=0;
 let parents={}
 let inBFS = false;
+let interval;
 let allThree = [0,0,0];
 function initialize(){
     add();
+    parents = {};
     DONE = false;
     butt_DONE = false;
     allThree = [0,0,0];
@@ -118,20 +120,24 @@ function setup() {
         trifecta();
         d.mousePressed(BFS2);
     }
+    let astr = function () {
+        document.getElementById("butt_done").innerHTML = "Visualize A*";
+        // document.getElementById("lord").classList.toggle("show");
+        allThree[2] = 1;
+        trifecta();
+        d.mousePressed(A_star);
+    }
     let l1 = createElement('a', "Dijkstra's/BFS");
     l1.parent("lord"); l1.mousePressed(bop);
-    let l2 = createElement('a', "A* (Under Development)");
-    l2.parent("lord")
-    let l3 = createElement('a', "More to come");
+    let l2 = createElement('a', "A Star (A*)");
+    l2.parent("lord"); l2.mousePressed(astr);
+    let l3 = createElement('a', "More (Under Development)");
     l3.parent("lord")
     
     // let x = createButton("temp");
     // x.parent(lower);
     // x.id("parent_button")
     // x.addClass("button button1")
-    
-    
-
     
     mz = createButton("Maze Gen");
     mz.mousePressed(maze_ini2);

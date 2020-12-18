@@ -1,4 +1,3 @@
-let interval;
 let found = false;
 let q = [];
 let temp = Spoint[0];
@@ -6,10 +5,7 @@ let endP = Epoint[0];
 function BFS2(){
     DONE = true;
     found = false;
-    if(!DONE){
-        alert("Choose an Algorithm");
-        return;
-    }
+    
     inBFS = true;
     if(Spoint.length == 0 || Epoint.length == 0){
         return;

@@ -9,6 +9,9 @@ class Shape{
         this.level = 0;
         this.visited = false;
         this.visited2 = false;
+        this.h = 1024;
+        this.weight = 1;
+        this.f = 1024;
         this.col = "#ffffff";
         this.cirR = 15;
     }
