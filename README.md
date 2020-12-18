@@ -13,13 +13,6 @@
   - Press Reset to reset everything
   - Added a maze Generation option too.
  
- <!-- Samples:
+## Example:
  
- ![Sample_1](sample1.png)
-
- ![Sample_2](sample_2.png)
-
- ![Sample_3](sample2.png)
-
- ![Sample_4](sample_1.png)
- -->
+ ![Example_1](https://media.giphy.com/media/WvbqG1V6g0ntqEIjyj/giphy.gif)
